@@ -25,3 +25,10 @@ p {
   margin-block-start: 0;
   margin-block-end: 0;
 }
+
+#big-height {
+  color: #e3350d;
+  font-style: italic;
+  font-weight: bold;
+  padding: 0 1rem;
+}
