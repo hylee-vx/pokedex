@@ -7,3 +7,9 @@ body {
   color: #212121;
   margin: 3rem;
 }
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #2a75bb;
+}
