@@ -32,3 +32,12 @@ p {
   font-weight: bold;
   padding: 0 1rem;
 }
+
+/* iPhone SE - to prevent #big-height split over two lines
+*/
+@media (max-width: 320px) {
+  #big-height {
+    display: block;
+    padding: 0;
+  }
+}
