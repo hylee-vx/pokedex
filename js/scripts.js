@@ -11,6 +11,10 @@ let pokemonRepository = (function() {
   function add(item) {
     pokemonList.push(item);
   }
+
+  function getAll() {
+    return pokemonList;
+  }
 })();
 
 function getPokemonHeight(character) {
