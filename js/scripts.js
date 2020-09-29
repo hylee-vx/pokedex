@@ -22,3 +22,5 @@ function getPokemonHeight(character) {
     document.write(pokemonHeight + bigHeight)
   }
 }
+
+pokemonList.forEach(getPokemonHeight);
