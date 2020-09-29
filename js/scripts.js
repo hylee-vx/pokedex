@@ -7,6 +7,18 @@ let pokemonList = [
   {name: 'Nidoqueen', height: 1.3, weight: 60, types: ['ground', 'poison']}
 ];
 
+function getPokemonHeight(character) {
+  //Shows each pokemon's height
+  let pokemonHeight =
+  `<h2>${character.name}</h2>
+  <p>Height: ${character.height}m</p>`;
+  //Comment for tallest pokemon
+  let bigHeight =
+  `<span id="big-height">Wow, that's big!</span>`;
+  //Highlights tallest pokemon with var bigHeight
+  if(character.height < 2) {
     document.write(pokemonHeight)
+  } else if (character.height >= 2) {
+    document.write(pokemonHeight + bigHeight)
   }
 }
