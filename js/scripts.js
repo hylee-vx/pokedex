@@ -7,6 +7,10 @@ let pokemonRepository = (function() {
     {name: 'Fearow', height: 1.2, weight: 38, types: ['flying', 'normal']},
     {name: 'Nidoqueen', height: 1.3, weight: 60, types: ['ground', 'poison']}
   ];
+
+  function add(item) {
+    pokemonList.push(item);
+  }
 })();
 
 function getPokemonHeight(character) {
