@@ -38,4 +38,4 @@ function getPokemonHeight(character) {
   }
 }
 
-pokemonList.forEach(getPokemonHeight);
+pokemonRepository.getAll().forEach(getPokemonHeight);
