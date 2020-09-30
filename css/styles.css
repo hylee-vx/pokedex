@@ -41,6 +41,9 @@ li {
   transition: opacity 0.4s;
 }
 
+.button-standard:hover, .button-standard:focus {
+  cursor: pointer;
+  opacity: 0.7;
 }
 
 /* iPhone SE - to prevent #big-height split over two lines
