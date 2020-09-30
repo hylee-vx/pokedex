@@ -16,10 +16,7 @@ h1 {
 
 }
 
-p {
   display: inline-block;
-  margin-block-start: 0;
-  margin-block-end: 0;
 }
 
 #big-height {
