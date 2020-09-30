@@ -1,5 +1,5 @@
 let pokemonRepository = (function() {
-  let pokemonList = [
+  let repository = [
     {name: 'Bulbasaur', height: 0.7, weight: 6.9, types:['grass', 'poison']},
     {name: 'Weedle', height: 0.3, weight: 3.2, types:['bug', 'poison']},
     {name: 'Onix', height: 8.8, weight: 210, types: ['rock', 'ground']},
