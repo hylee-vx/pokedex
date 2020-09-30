@@ -17,7 +17,7 @@ let pokemonRepository = (function() {
   }
 
   function getAll() {
-    return pokemonList;
+    return repository;
   }
 
   return {
