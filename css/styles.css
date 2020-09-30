@@ -18,6 +18,9 @@ h1 {
 li {
   text-align: center;
 }
+
+.pokemon-list {
+  list-style-type: none;
 }
 
   display: inline-block;
