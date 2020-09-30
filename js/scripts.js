@@ -8,11 +8,11 @@ let pokemonRepository = (function() {
     {name: 'Nidoqueen', height: 1.3, weight: 60, types: ['ground', 'poison']}
   ];
 
-  function add(item) {
-    if(
-      typeof item === 'object'
-    ) {
-      pokemonList.push(item);
+  function add(pokemon) {
+    if
+    (typeof pokemon === 'object')
+    {
+      repository.push(pokemon);
     }
   }
 
