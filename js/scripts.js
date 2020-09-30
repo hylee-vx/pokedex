@@ -24,6 +24,17 @@ let pokemonRepository = (function() {
     console.log(pokemon);
   }
 
+  //Creates list of pokemon from var repository to be displayed inside buttons
+  function addListItem(pokemon) {
+    let pokemonList = document.querySelector('.pokemon-list');
+    let pokemonListItem = document.createElement('li');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('button-standard');
+    pokemonListItem.appendChild(button);
+    pokemonList.appendChild(pokemonListItem);
+    }
+
   return {
     add: add,
     getAll: getAll
