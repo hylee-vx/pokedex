@@ -19,11 +19,6 @@ h1 {
   display: inline-block;
 }
 
-#big-height {
-  color: #e3350d;
-  font-style: italic;
-  font-weight: bold;
-  padding: 0 1rem;
 }
 
 /* iPhone SE - to prevent #big-height split over two lines
