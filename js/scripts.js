@@ -20,6 +20,10 @@ let pokemonRepository = (function() {
     return repository;
   }
 
+  function showDetails(pokemon) {
+    console.log(pokemon);
+  }
+
   return {
     add: add,
     getAll: getAll
