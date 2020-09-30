@@ -24,8 +24,5 @@ h1 {
 /* iPhone SE - to prevent #big-height split over two lines
 */
 @media (max-width: 320px) {
-  #big-height {
-    display: block;
-    padding: 0;
   }
 }
