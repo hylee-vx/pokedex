@@ -45,7 +45,8 @@ let pokemonRepository = (function() {
   };
 })();
 
+//Loops through all pokemon in var repository in IIFE and displays in buttons
+pokemonRepository.getAll().forEach(function(pokemon) {
+  pokemonRepository.addListItem(pokemon);
   }
-}
-
-pokemonRepository.getAll().forEach(getPokemonHeight);
+);
