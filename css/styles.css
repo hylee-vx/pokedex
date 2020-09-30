@@ -59,5 +59,16 @@ li {
   }
 }
 
+@media (min-width: 320px) and (max-width: 500px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  .button-standard {
+    width: 90%;
+    font-size: 20px;
+    padding: 1rem 2rem;
+  }
+}
   }
 }
