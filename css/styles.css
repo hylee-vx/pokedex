@@ -46,8 +46,18 @@ li {
   opacity: 0.7;
 }
 
-/* iPhone SE - to prevent #big-height split over two lines
-*/
+/* iPhone SE */
 @media (max-width: 320px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .button-standard {
+    width: 90%;
+    font-size: 18px;
+    padding: 1rem 2rem;
+  }
+}
+
   }
 }
