@@ -23,7 +23,22 @@ li {
   list-style-type: none;
 }
 
+.button-standard {
   display: inline-block;
+  width: 70%;
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: #3c5aa6;
+  color: #ffde00;
+  text-align: center;
+  text-decoration: none;
+  padding: 1.5rem 3rem;
+  margin: 0.25rem auto;
+  border-radius: 10px;
+  border-bottom: 2px solid rgba(0,0,0,0.4);
+  transition: opacity 0.4s;
 }
 
 }
