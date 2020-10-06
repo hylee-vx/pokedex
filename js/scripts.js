@@ -3,9 +3,9 @@ let pokemonRepository = (function() {
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
   function add(pokemon) {
-    if
-    (typeof pokemon === 'object')
-    {
+    if (
+      typeof pokemon === 'object'
+    ) {
       repository.push(pokemon);
     }
   }
