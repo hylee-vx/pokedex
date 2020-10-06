@@ -80,8 +80,10 @@ let pokemonRepository = (function() {
   };
 })();
 
-//Loops through all pokemon in var repository in IIFE and displays in buttons
-pokemonRepository.getAll().forEach(function(pokemon) {
-  pokemonRepository.addListItem(pokemon);
-  }
-);
+//Calls loadList(), then executes getAll()
+//Calls addListItem() to display list of pokemon inside buttons
+pokemonRepository.loadList().then(function() {
+  pokemonRepository.getAll().forEach(function(pokemon) {
+    pokemonRepository.addListItem(pokemon);
+  });
+});
