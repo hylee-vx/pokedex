@@ -29,6 +29,25 @@ let pokemonRepository = (function() {
       });
     }
 
+  //loads pokemon list in JSON format from API
+  //parses data into JavaScript
+  //adds each pokemon with name and URL
+  function loadList() {
+    return fetch(apiUrl).then(function(response) {
+      return response.json();
+    }).then(function(json) {
+      json.results.forEach(function(item) {
+        let pokemon = {
+          name: item.name,
+          detailsUrl: item.url
+        };
+        add(pokemon);
+      });
+    }).catch(function(error) {
+      console.error(error);
+    });
+  }
+
   return {
     add: add,
     getAll: getAll,
