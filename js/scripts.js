@@ -63,6 +63,13 @@ let pokemonRepository = (function() {
     });
   }
 
+  //calls loadDetails() and prints to console with click event from addListItem()
+  function showDetails(item) {
+    loadDetails(item).then(function() {
+      console.log(item);
+    });
+  }
+
   return {
     add: add,
     getAll: getAll,
