@@ -14,10 +14,6 @@ let pokemonRepository = (function() {
     return repository;
   }
 
-  function showDetails(pokemon) {
-    console.log(pokemon);
-  }
-
   //Creates list of pokemon from var repository to be displayed inside buttons
   //Prints details to console with click event
   function addListItem(pokemon) {
