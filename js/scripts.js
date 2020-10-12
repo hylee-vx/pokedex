@@ -97,6 +97,14 @@ let pokemonRepository = (function() {
       item.types.forEach(function(index) {
         typesElement.innerText = 'Types: ' + index.type.name;
       })
+
+      modal.appendChild(closeButtonElement);
+      modal.appendChild(titleElement);
+      modal.appendChild(imageElement);
+      modal.appendChild(heightElement);
+      modal.appendChild(weightElement);
+      modal.appendChild(typesElement);
+      modalContainer.appendChild(modal);
     });
   }
 
