@@ -76,6 +76,9 @@ let pokemonRepository = (function() {
       closeButtonElement.classList.add('modal-close');
       closeButtonElement.innerText = 'X';
       closeButtonElement.addEventListener('click', hideModal);
+
+      let titleElement = document.createElement('h1');
+      titleElement.innerText = item.name;
     });
   }
 
