@@ -108,6 +108,10 @@ let pokemonRepository = (function() {
       modalContainer.classList.add('is-visible');
   }
 
+  //shows details in a modal
+  function showDetails(item) {
+    loadDetails(item).then(function() {
+        showModal(item);
     });
   }
 
