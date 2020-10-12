@@ -64,6 +64,8 @@ let pokemonRepository = (function() {
     });
   }
 
+  //creates modal
+  function showModal(item) {
     loadDetails(item).then(function() {
     });
   }
