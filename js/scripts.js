@@ -79,6 +79,10 @@ let pokemonRepository = (function() {
 
       let titleElement = document.createElement('h1');
       titleElement.innerText = item.name;
+
+      let imageElement = document.createElement('img');
+      imageElement.classList.add('pokemon-image');
+      imageElement.src = item.imageUrl;
     });
   }
 
