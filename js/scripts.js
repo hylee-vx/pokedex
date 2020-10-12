@@ -115,6 +115,10 @@ let pokemonRepository = (function() {
     });
   }
 
+  //closes modal
+  function hideModal() {
+    modalContainer.classList.remove('is-visible');
+  }
   return {
     add: add,
     getAll: getAll,
