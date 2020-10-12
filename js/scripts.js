@@ -125,6 +125,14 @@ let pokemonRepository = (function() {
       hideModal();
     }
   });
+
+  modalContainer.addEventListener('click', function(e) {
+    let target = e.target;
+    if (target === modalContainer) {
+      hideModal();
+    }
+  });
+
   return {
     add: add,
     getAll: getAll,
