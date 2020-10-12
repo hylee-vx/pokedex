@@ -106,8 +106,6 @@ let pokemonRepository = (function() {
       modalContainer.appendChild(modal);
 
       modalContainer.classList.add('is-visible');
-    }).catch(function(error) {
-      console.error(error)
     });
   }
 
