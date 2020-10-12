@@ -91,6 +91,12 @@ let pokemonRepository = (function() {
       let weightElement = document.createElement('p');
       weightElement.classList.add('pokemon-weight');
       weightElement.innerText = 'Weight: ' + item.weight;
+
+      //will only print out first type
+      let typesElement = document.createElement('p');
+      item.types.forEach(function(index) {
+        typesElement.innerText = 'Types: ' + index.type.name;
+      })
     });
   }
 
