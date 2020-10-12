@@ -96,6 +96,11 @@ let pokemonRepository = (function() {
       item.types.forEach(function(index) {
         typesElement.innerText = 'Types: ' + index.type.name;
       })
+      //tried using for loop instead - again only prints out type at index[1]
+      
+      //for (let i = 0; i < item.types.length; i++) {
+        //typesElement.innerText = 'Types: ' + item.types[i].type.name;
+      //}
 
       modal.appendChild(closeButtonElement);
       modal.appendChild(titleElement);
