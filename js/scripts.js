@@ -67,6 +67,8 @@ let pokemonRepository = (function() {
   //creates modal
   function showModal(item) {
     loadDetails(item).then(function() {
+      let modal = document.createElement('div');
+      modal.classList.add('modal');
     });
   }
 
