@@ -154,6 +154,11 @@ li {
     margin-bottom: 0;
     font-size: 26px;
   }
+
+  .pokemon-image-wrapper {
+    grid-area: auto;
+    width: 60%;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 500px) {
