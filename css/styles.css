@@ -127,8 +127,8 @@ li {
   padding: 17% 0 17% 10%;
 }
 
-/* iPhone SE */
-@media (max-width: 320px) {
+
+@media (max-width: 480px) {
   h1 {
     font-size: 30px;
   }
