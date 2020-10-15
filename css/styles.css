@@ -159,6 +159,11 @@ li {
     grid-area: auto;
     width: 60%;
   }
+
+  .non-image-elements {
+    line-height: 1;
+    padding: 0 15% 0 25%;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 500px) {
