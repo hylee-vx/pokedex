@@ -86,6 +86,19 @@ li {
   border-radius: 10px;
   border-bottom: 2px solid rgba(0,0,0,0.4);
 }
+
+.modal-close {
+  text-align: right;
+  background-color: #042c3b;
+  color: #efefef;
+  border-radius: 5px;
+  transition: opacity 0.4s;
+}
+
+.modal-close:hover, .modal-close:focus {
+  cursor: pointer;
+  opacity: 0.7;
+}
   width: 100%;
   max-width: 700px;
   text-align: left;
