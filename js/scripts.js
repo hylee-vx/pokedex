@@ -58,7 +58,11 @@ let pokemonRepository = (function() {
       item.imageUrl = details.sprites.front_default;
       item.height = details.height;
       item.weight = details.weight;
-      item.types = details.types;
+      //Array.map() loops over array and returns modified version of that array
+      //to access object values nested inside array
+      item.types = details.types.map(function(typeObject) {
+        return typeObject.type.name;
+      });
     }).catch(function(error) {
       console.error(error);
     });
