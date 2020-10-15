@@ -88,6 +88,9 @@ let pokemonRepository = (function() {
       imageElement.classList.add('pokemon-image');
       imageElement.src = item.imageUrl;
 
+      let imageWrapper = document.createElement('div');
+      imageWrapper.classList.add('pokemon-image-wrapper');
+
       let heightElement = document.createElement('p');
       heightElement.classList.add('pokemon-height');
       heightElement.innerText = 'Height: ' + item.height;
