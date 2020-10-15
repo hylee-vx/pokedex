@@ -107,6 +107,7 @@ let pokemonRepository = (function() {
       weightElement.innerText = 'Weight: ' + modifiedWeight + 'kg';
 
       let typesElement = document.createElement('p');
+      typesElement.classList.add('pokemon-types');
 
       modal.appendChild(closeButtonElement);
       modal.appendChild(titleElement);
