@@ -147,6 +147,13 @@ li {
   .details-container {
     grid-template-columns: 1fr;
   }
+
+  .pokemon-name {
+    grid-area: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 26px;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 500px) {
