@@ -121,7 +121,10 @@ li {
 .pokemon-image {
   width: 100%;
 }
+
+.non-image-elements {
   text-align: left;
+  padding: 17% 0 17% 10%;
 }
 
 /* iPhone SE */
