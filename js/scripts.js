@@ -111,6 +111,9 @@ let pokemonRepository = (function() {
       let modifiedTypes = item.types.join(', ');
       typesElement.innerText = 'Types: ' + modifiedTypes;
 
+      let detailsContainer = document.createElement('div');
+      detailsContainer.classList.add('details-container');
+
       modal.appendChild(closeButtonElement);
       modal.appendChild(titleElement);
       modal.appendChild(imageElement);
