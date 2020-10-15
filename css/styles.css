@@ -194,5 +194,10 @@ li {
   .pokemon-name {
     font-size: 30px;
   }
+
+  .pokemon-image-wrapper {
+    grid-area: auto;
+    width: 60%;
+  }
   }
 }
