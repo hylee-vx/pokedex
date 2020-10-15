@@ -118,11 +118,14 @@ let pokemonRepository = (function() {
       nonImageElements.classList.add('non-image-elements');
 
       modal.appendChild(closeButtonElement);
-      modal.appendChild(titleElement);
-      modal.appendChild(imageElement);
-      modal.appendChild(heightElement);
-      modal.appendChild(weightElement);
-      modal.appendChild(typesElement);
+      modal.appendChild(detailsContainer);
+      detailsContainer.appendChild(titleElement);
+      detailsContainer.appendChild(imageWrapper);
+      detailsContainer.appendChild(nonImageElements);
+      imageWrapper.appendChild(imageElement);
+      nonImageElements.appendChild(heightElement);
+      nonImageElements.appendChild(weightElement);
+      nonImageElements.appendChild(typesElement);
       modalContainer.appendChild(modal);
 
       modalContainer.classList.add('is-visible');
