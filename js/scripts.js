@@ -114,6 +114,9 @@ let pokemonRepository = (function() {
       let detailsContainer = document.createElement('div');
       detailsContainer.classList.add('details-container');
 
+      let nonImageElements = document.createElement('div');
+      nonImageElements.classList.add('non-image-elements');
+
       modal.appendChild(closeButtonElement);
       modal.appendChild(titleElement);
       modal.appendChild(imageElement);
