@@ -99,6 +99,11 @@ li {
   cursor: pointer;
   opacity: 0.7;
 }
+
+.details-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
   width: 100%;
   max-width: 700px;
   text-align: left;
