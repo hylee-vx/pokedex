@@ -81,6 +81,7 @@ let pokemonRepository = (function() {
       closeButtonElement.addEventListener('click', hideModal);
 
       let titleElement = document.createElement('h1');
+      titleElement.classList.add('pokemon-name');
       titleElement.innerText = item.name;
 
       let imageElement = document.createElement('img');
