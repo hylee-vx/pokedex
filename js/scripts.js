@@ -108,6 +108,8 @@ let pokemonRepository = (function() {
 
       let typesElement = document.createElement('p');
       typesElement.classList.add('pokemon-types');
+      let modifiedTypes = item.types.join(', ');
+      typesElement.innerText = 'Types: ' + modifiedTypes;
 
       modal.appendChild(closeButtonElement);
       modal.appendChild(titleElement);
