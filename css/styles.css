@@ -190,5 +190,9 @@ li {
     font-size: 24px;
     padding: 1rem 2rem;
   }
+
+  .pokemon-name {
+    font-size: 30px;
+  }
   }
 }
