@@ -91,6 +91,11 @@ let pokemonRepository = (function() {
       let imageWrapper = document.createElement('div');
       imageWrapper.classList.add('pokemon-image-wrapper');
 
+      //formats integers returned by loadDetails into floats with one decimal place
+      function insertDecimal(num) {
+        return (num / 10).toFixed(1);
+      }
+
       let heightElement = document.createElement('p');
       heightElement.classList.add('pokemon-height');
       heightElement.innerText = 'Height: ' + item.height;
