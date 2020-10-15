@@ -186,7 +186,9 @@ li {
   }
 
   .button-standard {
-    width: 80%;
+    width: 70%;
     font-size: 24px;
+    padding: 1rem 2rem;
+  }
   }
 }
