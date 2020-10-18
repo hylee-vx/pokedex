@@ -89,7 +89,8 @@ li {
 }
 
 .modal-close {
-  text-align: right;
+  display: block;
+  margin-left: auto;
   background-color: #042c3b;
   color: #efefef;
   border-radius: 5px;
