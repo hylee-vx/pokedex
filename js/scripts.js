@@ -104,7 +104,7 @@ let pokemonRepository = (function() {
       let weightElement = document.createElement('p');
       weightElement.classList.add('pokemon-weight');
       let modifiedWeight = insertDecimal(item.weight);
-      weightElement.innerText = 'Weight: ' + modifiedWeight + 'kg';
+      weightElement.innerHTML = `<span class='detail-category'>Weight: </span>${modifiedWeight}kg`;
 
       let typesElement = document.createElement('p');
       typesElement.classList.add('pokemon-types');
