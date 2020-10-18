@@ -99,7 +99,7 @@ let pokemonRepository = (function() {
       let heightElement = document.createElement('p');
       heightElement.classList.add('pokemon-height');
       let modifiedHeight = insertDecimal(item.height);
-      heightElement.innerText = 'Height: ' + modifiedHeight + 'm';
+      heightElement.innerHTML = `<span class='detail-category'>Height: </span>${modifiedHeight}m`;
 
       let weightElement = document.createElement('p');
       weightElement.classList.add('pokemon-weight');
