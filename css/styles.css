@@ -129,6 +129,10 @@ li {
   padding: 17% 0 17% 10%;
 }
 
+.detail-category {
+  font-weight: 600;
+}
+
 
 @media (max-width: 480px) {
   h1 {
