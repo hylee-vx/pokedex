@@ -109,7 +109,7 @@ let pokemonRepository = (function() {
       let typesElement = document.createElement('p');
       typesElement.classList.add('pokemon-types');
       let modifiedTypes = item.types.join(', ');
-      typesElement.innerText = 'Types: ' + modifiedTypes;
+      typesElement.innerHTML = `<span class='detail-category'>Types: </span>${modifiedTypes}`;
 
       let detailsContainer = document.createElement('div');
       detailsContainer.classList.add('details-container');
