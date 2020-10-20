@@ -17,9 +17,6 @@ const pokemonRepository = (function() {
   //Creates list of pokemon from API loaded via showDetails() to be displayed inside buttons
   //Displays details in modal with click event
   function addListItem(pokemon) {
-    pokemonListItem.appendChild(button);
-    pokemonList.appendChild(pokemonListItem);
-    button.addEventListener('click', function() {
     const pokemonList = $('.list-group');
     const pokemonListItem = $('<li></li>');
     pokemonListItem.addClass('group-list-item');
@@ -28,6 +25,11 @@ const pokemonRepository = (function() {
     button.addClass('btn btn-primary');
     button.attr('data-toggle', 'modal');
     button.attr('data-target', '#modal-container');
+
+    pokemonListItem.append(button);
+    pokemonList.append(pokemonListItem);
+
+    button.on('click', function() {
       showDetails(pokemon);
       });
     }
