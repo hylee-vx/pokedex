@@ -74,8 +74,6 @@ const pokemonRepository = (function() {
 
   //creates modal
   function showModal(item) {
-
-      modalContainer.classList.add('is-visible');
     const modalHeader = $('modal-header');
     const modalTitle = $('modal-title');
     const modalBody = $('.modal-body');
