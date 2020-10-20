@@ -75,12 +75,6 @@ const pokemonRepository = (function() {
   //creates modal
   function showModal(item) {
 
-      let detailsContainer = document.createElement('div');
-      detailsContainer.classList.add('details-container');
-
-      let nonImageElements = document.createElement('div');
-      nonImageElements.classList.add('non-image-elements');
-
       modal.appendChild(closeButtonElement);
       modal.appendChild(detailsContainer);
       detailsContainer.appendChild(titleElement);
