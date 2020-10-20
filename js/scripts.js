@@ -75,10 +75,6 @@ const pokemonRepository = (function() {
   //creates modal
   function showModal(item) {
 
-      let titleElement = document.createElement('h1');
-      titleElement.classList.add('pokemon-name');
-      titleElement.innerText = item.name;
-
       let imageElement = document.createElement('img');
       imageElement.classList.add('pokemon-image');
       imageElement.src = item.imageUrl;
@@ -131,6 +127,8 @@ const pokemonRepository = (function() {
     //clears existing modal content
     modalTitle.empty();
     modalBody.empty();
+
+    const titleElement = $('<h1>' + item.name + '</h1>');
   }
 
   //shows details in a modal
