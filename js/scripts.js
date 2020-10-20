@@ -75,11 +75,6 @@ const pokemonRepository = (function() {
   //creates modal
   function showModal(item) {
 
-      let weightElement = document.createElement('p');
-      weightElement.classList.add('pokemon-weight');
-      let modifiedWeight = insertDecimal(item.weight);
-      weightElement.innerHTML = `<span class='detail-category'>Weight: </span>${modifiedWeight}kg`;
-
       let typesElement = document.createElement('p');
       typesElement.classList.add('pokemon-types');
       let modifiedTypes = item.types.join(', ');
@@ -124,6 +119,10 @@ const pokemonRepository = (function() {
     const modifiedHeight = insertDecimal(item.height);
     const heightElement = $('<p>' + '<span class="detail-category">Height: </span>' + '</p>' + modifiedHeight + 'm');
     heightElement.addClass('pokemon-height');
+
+    const modifiedWeight = insertDecimal(item.weight);
+    const weightElement = $('<p>' + '<span class="detail-category">Weight: </span>' + '</p>' + modifiedWeight + 'kg');
+    weightElement.addClass('pokemon-weight');
   }
 
   //shows details in a modal
