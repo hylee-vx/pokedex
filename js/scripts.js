@@ -118,24 +118,6 @@ const pokemonRepository = (function() {
     });
   }
 
-  //closes modal
-  function hideModal() {
-    modalContainer.classList.remove('is-visible');
-  }
-
-  window.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-      hideModal();
-    }
-  });
-
-  modalContainer.addEventListener('click', function(e) {
-    let target = e.target;
-    if (target === modalContainer) {
-      hideModal();
-    }
-  });
-
   return {
     add: add,
     getAll: getAll,
@@ -143,8 +125,7 @@ const pokemonRepository = (function() {
     loadList: loadList,
     loadDetails: loadDetails,
     showModal: showModal,
-    showDetails: showDetails,
-    hideModal: hideModal
+    showDetails: showDetails
   };
 })();
 
