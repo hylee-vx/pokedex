@@ -17,15 +17,17 @@ const pokemonRepository = (function() {
   //Creates list of pokemon from API loaded via showDetails() to be displayed inside buttons
   //Displays details in modal with click event
   function addListItem(pokemon) {
-    let button = document.createElement('button');
-    button.innerText = pokemon.name;
-    button.classList.add('button-standard');
     pokemonListItem.appendChild(button);
     pokemonList.appendChild(pokemonListItem);
     button.addEventListener('click', function() {
     const pokemonList = $('.list-group');
     const pokemonListItem = $('<li></li>');
     pokemonListItem.addClass('group-list-item');
+
+    const button = $('<button>' + pokemon.name + '</button>');
+    button.addClass('btn btn-primary');
+    button.attr('data-toggle', 'modal');
+    button.attr('data-target', '#modal-container');
       showDetails(pokemon);
       });
     }
