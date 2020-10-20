@@ -42,7 +42,7 @@ const pokemonRepository = (function() {
       return response.json();
     }).then(function(json) {
       json.results.forEach(function(item) {
-        let pokemon = {
+        const pokemon = {
           name: item.name,
           detailsUrl: item.url
         };
@@ -55,7 +55,7 @@ const pokemonRepository = (function() {
 
   //adds details to item from detailsURL
   function loadDetails(item) {
-    let url = item.detailsUrl;
+    const url = item.detailsUrl;
     return fetch(url).then(function (response) {
       return response.json();
     }).then(function(details) {
