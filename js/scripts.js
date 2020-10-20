@@ -75,11 +75,6 @@ const pokemonRepository = (function() {
   //creates modal
   function showModal(item) {
 
-      //formats integers returned by loadDetails into floats with one decimal place
-      function insertDecimal(num) {
-        return (num / 10).toFixed(1);
-      }
-
       let heightElement = document.createElement('p');
       heightElement.classList.add('pokemon-height');
       let modifiedHeight = insertDecimal(item.height);
@@ -125,6 +120,11 @@ const pokemonRepository = (function() {
 
     const imageElement = $('<img class="pokemon-image" style="width:50%">');
     imageElement.attr('src', item.imageUrl);
+
+    //formats integers returned by loadDetails into floats with one decimal place
+    function insertDecimal(num) {
+      return (num / 10).toFixed(1);
+    }
   }
 
   //shows details in a modal
