@@ -75,9 +75,6 @@ const pokemonRepository = (function() {
   //creates modal
   function showModal(item) {
 
-      let imageWrapper = document.createElement('div');
-      imageWrapper.classList.add('pokemon-image-wrapper');
-
       //formats integers returned by loadDetails into floats with one decimal place
       function insertDecimal(num) {
         return (num / 10).toFixed(1);
