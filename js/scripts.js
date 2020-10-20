@@ -1,7 +1,7 @@
-let pokemonRepository = (function() {
-  let repository = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
   let modalContainer = document.querySelector('#modal-container');
+const pokemonRepository = (function() {
+  const repository = [];
+  const apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
   function add(pokemon) {
     if (
