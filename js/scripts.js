@@ -74,15 +74,6 @@ const pokemonRepository = (function() {
 
   //creates modal
   function showModal(item) {
-      //clears existing modal content
-      modalContainer.innerHTML = '';
-      let modal = document.createElement('div');
-      modal.classList.add('modal');
-
-      let closeButtonElement = document.createElement('button');
-      closeButtonElement.classList.add('modal-close');
-      closeButtonElement.innerText = 'X';
-      closeButtonElement.addEventListener('click', hideModal);
 
       let titleElement = document.createElement('h1');
       titleElement.classList.add('pokemon-name');
@@ -133,6 +124,13 @@ const pokemonRepository = (function() {
       modalContainer.appendChild(modal);
 
       modalContainer.classList.add('is-visible');
+    const modalHeader = $('modal-header');
+    const modalTitle = $('modal-title');
+    const modalBody = $('.modal-body');
+
+    //clears existing modal content
+    modalTitle.empty();
+    modalBody.empty();
   }
 
   //shows details in a modal
