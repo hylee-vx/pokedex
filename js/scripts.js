@@ -75,17 +75,6 @@ const pokemonRepository = (function() {
   //creates modal
   function showModal(item) {
 
-      modal.appendChild(closeButtonElement);
-      modal.appendChild(detailsContainer);
-      detailsContainer.appendChild(titleElement);
-      detailsContainer.appendChild(imageWrapper);
-      detailsContainer.appendChild(nonImageElements);
-      imageWrapper.appendChild(imageElement);
-      nonImageElements.appendChild(heightElement);
-      nonImageElements.appendChild(weightElement);
-      nonImageElements.appendChild(typesElement);
-      modalContainer.appendChild(modal);
-
       modalContainer.classList.add('is-visible');
     const modalHeader = $('modal-header');
     const modalTitle = $('modal-title');
@@ -116,6 +105,12 @@ const pokemonRepository = (function() {
     const modifiedTypes = item.types.join(', ');
     const typesElement = $('<p>' + '<span class="detail-category">Types: </span>' + '</p>' + modifiedTypes);
     typesElement.addClass('pokemon-types');
+
+    modalTitle.append(titleElement);
+    modalBody.append(imageElement);
+    modalBody.append(heightElement);
+    modalBody.append(weightElement);
+    modalBody.append(typesElement);
   }
 
   //shows details in a modal
