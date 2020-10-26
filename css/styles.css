@@ -103,7 +103,7 @@ h2 {
   }
 
   .image-wrapper {
-    width: 60%;
+    width: 75%;
     padding-left: 0;
     margin: 0;
   }
@@ -121,6 +121,10 @@ h2 {
 
   .btn-primary {
     font-size: 20px;
+  }
+
+  .image-wrapper {
+    width: 60%;
   }
 }
 
