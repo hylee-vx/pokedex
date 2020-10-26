@@ -74,17 +74,17 @@ const pokemonRepository = (function() {
 
   //creates modal
   function showModal(item) {
-    const modalHeader = $('modal-header');
-    const modalTitle = $('modal-title');
+    const modalHeader = $('.modal-header');
+    const modalTitle = $('.modal-title');
     const modalBody = $('.modal-body');
 
     //clears existing modal content
     modalTitle.empty();
     modalBody.empty();
 
-    const titleElement = $('<h1>' + item.name + '</h1>');
+    const titleElement = $('<h2>' + item.name + '</h2>');
 
-    const imageElement = $('<img class="pokemon-image" style="width:50%">');
+    const imageElement = $('<img class="pokemon-image" style="width:100%">');
     imageElement.attr('src', item.imageUrl);
 
     //formats integers returned by loadDetails into floats with one decimal place
@@ -93,22 +93,42 @@ const pokemonRepository = (function() {
     }
 
     const modifiedHeight = insertDecimal(item.height);
-    const heightElement = $('<p>' + '<span class="detail-category">Height: </span>' + '</p>' + modifiedHeight + 'm');
+    const heightElement = $('<p>' + '<span class="detail-category">Height: </span>' + modifiedHeight + 'm' + '</p>');
     heightElement.addClass('pokemon-height');
 
     const modifiedWeight = insertDecimal(item.weight);
-    const weightElement = $('<p>' + '<span class="detail-category">Weight: </span>' + '</p>' + modifiedWeight + 'kg');
+    const weightElement = $('<p>' + '<span class="detail-category">Weight: </span>' + modifiedWeight + 'kg' + '</p>');
     weightElement.addClass('pokemon-weight');
 
     const modifiedTypes = item.types.join(', ');
-    const typesElement = $('<p>' + '<span class="detail-category">Types: </span>' + '</p>' + modifiedTypes);
+    const typesElement = $('<p>' + '<span class="detail-category">Types: </span>' + modifiedTypes  + '</p>');
     typesElement.addClass('pokemon-types');
 
+    const detailsContainer = $('<div></div>');
+    detailsContainer.addClass('container-fluid');
+
+    const row = $('<div></div>');
+    row.addClass('row');
+
+    const imageWrapper = $('<div></div>');
+    imageWrapper.addClass('col-sm-6');
+    imageWrapper.addClass('image-wrapper');
+
+    const nonImageElements = $('<div></div>');
+    nonImageElements.addClass('col-sm-6');
+    nonImageElements.addClass('non-image-elements');
+
     modalTitle.append(titleElement);
-    modalBody.append(imageElement);
-    modalBody.append(heightElement);
-    modalBody.append(weightElement);
-    modalBody.append(typesElement);
+    modalBody.append(detailsContainer);
+
+    detailsContainer.append(row);
+    row.append(imageWrapper);
+    row.append(nonImageElements);
+
+    imageWrapper.append(imageElement);
+    nonImageElements.append(heightElement);
+    nonImageElements.append(weightElement);
+    nonImageElements.append(typesElement);
   }
 
   //shows details in a modal
