@@ -3,9 +3,7 @@ const pokemonRepository = (function() {
   const apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
   function add(pokemon) {
-    if (
-      typeof pokemon === 'object'
-    ) {
+    if (typeof pokemon === 'object') {
       repository.push(pokemon);
     }
   }
@@ -31,45 +29,51 @@ const pokemonRepository = (function() {
 
     button.on('click', function() {
       showDetails(pokemon);
-      });
-    }
+    });
+  }
 
   //loads pokemon list in JSON format from API
   //parses data into JavaScript
   //adds each pokemon with name and URL
   function loadList() {
-    return fetch(apiUrl).then(function(response) {
-      return response.json();
-    }).then(function(json) {
-      json.results.forEach(function(item) {
-        const pokemon = {
-          name: item.name,
-          detailsUrl: item.url
-        };
-        add(pokemon);
+    return fetch(apiUrl)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(json) {
+        json.results.forEach(function(item) {
+          const pokemon = {
+            name: item.name,
+            detailsUrl: item.url
+          };
+          add(pokemon);
+        });
+      })
+      .catch(function(error) {
+        console.error(error);
       });
-    }).catch(function(error) {
-      console.error(error);
-    });
   }
 
   //adds details to item from detailsURL
   function loadDetails(item) {
     const url = item.detailsUrl;
-    return fetch(url).then(function (response) {
-      return response.json();
-    }).then(function(details) {
-      item.imageUrl = details.sprites.front_default;
-      item.height = details.height;
-      item.weight = details.weight;
-      //Array.map() loops over array and returns modified version of that array
-      //to access object values nested inside array
-      item.types = details.types.map(function(typeObject) {
-        return typeObject.type.name;
+    return fetch(url)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(details) {
+        item.imageUrl = details.sprites.front_default;
+        item.height = details.height;
+        item.weight = details.weight;
+        //Array.map() loops over array and returns modified version of that array
+        //to access object values nested inside array
+        item.types = details.types.map(function(typeObject) {
+          return typeObject.type.name;
+        });
+      })
+      .catch(function(error) {
+        console.error(error);
       });
-    }).catch(function(error) {
-      console.error(error);
-    });
   }
 
   //creates modal
@@ -93,17 +97,35 @@ const pokemonRepository = (function() {
     }
 
     const modifiedHeight = insertDecimal(item.height);
-    const heightElement = $('<p>' + '<span class="detail-category">Height: </span>' + modifiedHeight + 'm' + '</p>');
+    const heightElement = $(
+      '<p>' +
+        '<span class="detail-category">Height: </span>' +
+        modifiedHeight +
+        'm' +
+        '</p>'
+    );
     heightElement.addClass('pokemon-height');
 
     const modifiedWeight = insertDecimal(item.weight);
-    const weightElement = $('<p>' + '<span class="detail-category">Weight: </span>' + modifiedWeight + 'kg' + '</p>');
+    const weightElement = $(
+      '<p>' +
+        '<span class="detail-category">Weight: </span>' +
+        modifiedWeight +
+        'kg' +
+        '</p>'
+    );
     weightElement.addClass('pokemon-weight');
 
     const modifiedTypes = item.types.join(', ');
-    const typesElement = $('<p>' + '<span class="detail-category">Types: </span>' + modifiedTypes + '</p>');
+    const typesElement = $(
+      '<p>' +
+        '<span class="detail-category">Types: </span>' +
+        modifiedTypes +
+        '</p>'
+    );
     typesElement.addClass('pokemon-types');
 
+    //adds wrappers to manipulate modal content
     const detailsContainer = $('<div></div>');
     detailsContainer.addClass('container-fluid');
 
@@ -134,7 +156,7 @@ const pokemonRepository = (function() {
   //shows details in a modal
   function showDetails(item) {
     loadDetails(item).then(function() {
-        showModal(item);
+      showModal(item);
     });
   }
 
