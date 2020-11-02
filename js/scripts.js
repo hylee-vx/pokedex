@@ -101,7 +101,7 @@ const pokemonRepository = (function() {
     weightElement.addClass('pokemon-weight');
 
     const modifiedTypes = item.types.join(', ');
-    const typesElement = $('<p>' + '<span class="detail-category">Types: </span>' + modifiedTypes  + '</p>');
+    const typesElement = $('<p>' + '<span class="detail-category">Types: </span>' + modifiedTypes + '</p>');
     typesElement.addClass('pokemon-types');
 
     const detailsContainer = $('<div></div>');
